@@ -4,7 +4,9 @@ FROM redis:4.0.8
 # Maintener
 MAINTAINER Mustafa Bayrak <mustafa.bayrak@windowslive.com>
 
-RUN apt-get update && apt install apt-utils -y && apt install vim -y
+RUN apt-get update
+RUN apt install apt-utils -y
+RUN apt install vim -y
 
 # Copy config redis
 RUN mkdir -p /usr/local/etc/redis/
